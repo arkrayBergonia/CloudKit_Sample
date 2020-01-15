@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        CKContainer.default().fetchUserRecordID { (recordID, error) in
+            if let error = error {
+                print(error)
+            } else if let recordID = recordID {
+                print(recordID)
+            }
+        }
     }
 
 
