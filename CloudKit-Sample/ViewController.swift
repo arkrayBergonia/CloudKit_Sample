@@ -11,6 +11,9 @@ import CloudKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textfield: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +26,20 @@ class ViewController: UIViewController {
         }
     }
 
-
+    @IBAction func saveBtnTapped(_ sender: UIButton) {
+        print("saveBtnTapped")
+    }
+    
+    @IBAction func retrieveBtnTapped(_ sender: UIButton) {
+        print("retrieveBtnTapped")
+    }
+    
+    @IBAction func updateBtnTapped(_ sender: UIButton) {
+        print("updateBtnTapped")
+    }
+    
+    @IBAction func deleteBtnTapped(_ sender: UIButton) {
+        print("deleteBtnTapped")
+    }
 }
 
