@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		1D51015323CEBE9C0065CC8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D51015223CEBE9C0065CC8A /* Assets.xcassets */; };
 		1D51015623CEBE9C0065CC8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D51015423CEBE9C0065CC8A /* LaunchScreen.storyboard */; };
 		1D51016023CEDBB80065CC8A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D51015F23CEDBB80065CC8A /* CloudKit.framework */; };
+		1D7E0BA023DFBD2400B54FCD /* SaveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E0B9F23DFBD2400B54FCD /* SaveItem.swift */; };
+		1D7E0BA223DFBD3800B54FCD /* SavePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E0BA123DFBD3800B54FCD /* SavePhoto.swift */; };
+		1D7E0BA823DFBE6700B54FCD /* RealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E0BA723DFBE6700B54FCD /* RealmDatabaseManager.swift */; };
+		1D7E0BAA23DFBF9700B54FCD /* ImportExportDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E0BA923DFBF9700B54FCD /* ImportExportDataManager.swift */; };
 		32AC93EFA8562A0A7D5F9A4C /* Pods_CloudKit_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B1873A775C7F83CC2C5FFF /* Pods_CloudKit_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		1D51015723CEBE9C0065CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D51015D23CEDBB40065CC8A /* CloudKit-Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CloudKit-Sample.entitlements"; sourceTree = "<group>"; };
 		1D51015F23CEDBB80065CC8A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1D7E0B9F23DFBD2400B54FCD /* SaveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveItem.swift; sourceTree = "<group>"; };
+		1D7E0BA123DFBD3800B54FCD /* SavePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhoto.swift; sourceTree = "<group>"; };
+		1D7E0BA723DFBE6700B54FCD /* RealmDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManager.swift; sourceTree = "<group>"; };
+		1D7E0BA923DFBF9700B54FCD /* ImportExportDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportDataManager.swift; sourceTree = "<group>"; };
 		C3B1873A775C7F83CC2C5FFF /* Pods_CloudKit_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudKit_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBD5628A0DF6DFD34FD21F /* Pods-CloudKit-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudKit-Sample.debug.xcconfig"; path = "Target Support Files/Pods-CloudKit-Sample/Pods-CloudKit-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		F75AE56DE076A1D4A0A16056 /* Pods-CloudKit-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudKit-Sample.release.xcconfig"; path = "Target Support Files/Pods-CloudKit-Sample/Pods-CloudKit-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,8 +75,10 @@
 			children = (
 				1D51015D23CEDBB40065CC8A /* CloudKit-Sample.entitlements */,
 				1D51014B23CEBE9B0065CC8A /* AppDelegate.swift */,
-				1D51014D23CEBE9B0065CC8A /* ViewController.swift */,
-				1D51014F23CEBE9B0065CC8A /* Main.storyboard */,
+				1D7E0BA323DFBD8200B54FCD /* Models */,
+				1D7E0BA423DFBD8900B54FCD /* Views */,
+				1D7E0BA523DFBD8F00B54FCD /* Controllers */,
+				1D7E0BA623DFBDDE00B54FCD /* Support Files */,
 				1D51015223CEBE9C0065CC8A /* Assets.xcassets */,
 				1D51015423CEBE9C0065CC8A /* LaunchScreen.storyboard */,
 				1D51015723CEBE9C0065CC8A /* Info.plist */,
@@ -85,13 +95,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1D7E0BA323DFBD8200B54FCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D7E0B9F23DFBD2400B54FCD /* SaveItem.swift */,
+				1D7E0BA123DFBD3800B54FCD /* SavePhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D7E0BA423DFBD8900B54FCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D51014F23CEBE9B0065CC8A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D7E0BA523DFBD8F00B54FCD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D51014D23CEBE9B0065CC8A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D7E0BA623DFBDDE00B54FCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D7E0BA723DFBE6700B54FCD /* RealmDatabaseManager.swift */,
+				1D7E0BA923DFBF9700B54FCD /* ImportExportDataManager.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		CA5D83B1FCB1AC0C7810E8B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				CEBBD5628A0DF6DFD34FD21F /* Pods-CloudKit-Sample.debug.xcconfig */,
 				F75AE56DE076A1D4A0A16056 /* Pods-CloudKit-Sample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,8 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7E0BA023DFBD2400B54FCD /* SaveItem.swift in Sources */,
 				1D51014E23CEBE9B0065CC8A /* ViewController.swift in Sources */,
+				1D7E0BAA23DFBF9700B54FCD /* ImportExportDataManager.swift in Sources */,
+				1D7E0BA823DFBE6700B54FCD /* RealmDatabaseManager.swift in Sources */,
 				1D51014C23CEBE9B0065CC8A /* AppDelegate.swift in Sources */,
+				1D7E0BA223DFBD3800B54FCD /* SavePhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
