@@ -1,0 +1,6 @@
+framework module Pods_CloudKit_Sample {
+  umbrella header "Pods-CloudKit-Sample-umbrella.h"
+
+  export *
+  module * { export * }
+}

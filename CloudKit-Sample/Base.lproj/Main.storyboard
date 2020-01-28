@@ -16,70 +16,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B88-eL-F7k">
-                                <rect key="frame" x="72" y="149" width="270" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="psu-Vj-bCS">
-                                <rect key="frame" x="47.5" y="223" width="319" height="119"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="grz-6X-l02">
+                                <rect key="frame" x="40" y="84" width="319" height="493"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="5j5-FS-zHx">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="119"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B88-eL-F7k">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mm-j9-6mC">
+                                        <rect key="frame" x="0.0" y="64" width="319" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-o5-ONn">
+                                        <rect key="frame" x="0.0" y="144" width="319" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="0n5-nh-2nJ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="7F5-1C-lld"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="psu-Vj-bCS">
+                                        <rect key="frame" x="0.0" y="374" width="319" height="119"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-Au-fBF">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="5n2-pd-Fuq"/>
-                                                    <constraint firstAttribute="width" constant="150" id="rwA-ny-fRI"/>
-                                                </constraints>
-                                                <state key="normal" title="Save"/>
-                                                <connections>
-                                                    <action selector="saveBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DE4-ou-jqT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xq-7t-AMN">
-                                                <rect key="frame" x="0.0" y="69" width="150" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="Wb3-0T-ioB"/>
-                                                    <constraint firstAttribute="height" constant="50" id="aKF-Ja-OnV"/>
-                                                </constraints>
-                                                <state key="normal" title="Retrieve"/>
-                                                <connections>
-                                                    <action selector="retrieveBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p33-wM-pEC"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-3v-Lkh">
-                                        <rect key="frame" x="169" y="0.0" width="150" height="119"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-rE-5Hw">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="qcE-Fa-5kB"/>
-                                                    <constraint firstAttribute="width" constant="150" id="u2g-tn-nb0"/>
-                                                </constraints>
-                                                <state key="normal" title="Update"/>
-                                                <connections>
-                                                    <action selector="updateBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXW-0z-49T"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-tG-3Md">
-                                                <rect key="frame" x="0.0" y="69" width="150" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="JPO-pS-JpB"/>
-                                                    <constraint firstAttribute="width" constant="150" id="OZl-QA-Tuf"/>
-                                                </constraints>
-                                                <state key="normal" title="Delete"/>
-                                                <connections>
-                                                    <action selector="deleteBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPa-T7-Gjg"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="5j5-FS-zHx">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="119"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-Au-fBF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="5n2-pd-Fuq"/>
+                                                            <constraint firstAttribute="width" constant="150" id="rwA-ny-fRI"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Save"/>
+                                                        <connections>
+                                                            <action selector="saveBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DE4-ou-jqT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xq-7t-AMN">
+                                                        <rect key="frame" x="0.0" y="69" width="150" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="Wb3-0T-ioB"/>
+                                                            <constraint firstAttribute="height" constant="50" id="aKF-Ja-OnV"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Retrieve"/>
+                                                        <connections>
+                                                            <action selector="retrieveBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p33-wM-pEC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-3v-Lkh">
+                                                <rect key="frame" x="169" y="0.0" width="150" height="119"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-rE-5Hw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="qcE-Fa-5kB"/>
+                                                            <constraint firstAttribute="width" constant="150" id="u2g-tn-nb0"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Update"/>
+                                                        <connections>
+                                                            <action selector="updateBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXW-0z-49T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-tG-3Md">
+                                                        <rect key="frame" x="0.0" y="69" width="150" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="JPO-pS-JpB"/>
+                                                            <constraint firstAttribute="width" constant="150" id="OZl-QA-Tuf"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Delete"/>
+                                                        <connections>
+                                                            <action selector="deleteBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPa-T7-Gjg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -87,11 +105,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="psu-Vj-bCS" firstAttribute="top" secondItem="B88-eL-F7k" secondAttribute="bottom" constant="40" id="A71-3Z-P5f"/>
-                            <constraint firstItem="B88-eL-F7k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="DZD-lY-TIP"/>
-                            <constraint firstItem="B88-eL-F7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="FVS-nd-G4a"/>
-                            <constraint firstItem="psu-Vj-bCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bc9-9K-xUC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B88-eL-F7k" secondAttribute="trailing" constant="72" id="kJn-yt-mfa"/>
+                            <constraint firstItem="grz-6X-l02" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="9bl-2B-yXY"/>
+                            <constraint firstItem="grz-6X-l02" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="En5-TH-hNs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="grz-6X-l02" secondAttribute="trailing" constant="20" id="pFC-Xw-Jti"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -101,7 +117,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="121.875"/>
+            <point key="canvasLocation" x="119" y="63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo-camera" width="512" height="512"/>
+    </resources>
 </document>
