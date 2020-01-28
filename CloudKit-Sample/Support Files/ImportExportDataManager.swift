@@ -14,10 +14,10 @@ class ImportExportDataManager {
     // local variable used for Backup **Data-related WIP
     let directoryName = "Preferences"
     let plistName = "jp.co.arkray.EmergencyCall_Swift.plist"
-    let allPasswordKeys = KeyHelper.loadAllKeys()
+    let allPasswordKeys = ["test-Data", "test-Photo"]
     
     var allNotePhotoKeys : [String] {
-        let notePhotoKeys = KeyHelper.NoteSetting.info.map({ $0.key+"+Image" })
+        let notePhotoKeys = ["test-Photo"]
         return notePhotoKeys
     }
     
